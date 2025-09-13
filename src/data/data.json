@@ -1,0 +1,149 @@
+{
+  "banners": [
+    {
+      "id": "1",
+      "title": "Capture Life's Beautiful Moments",
+      "subtitle": "Professional photography for every occasion",
+      "imageDesktop": "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+      "imageMobile": "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=768&h=1024&fit=crop",
+      "active": true
+    },
+    {
+      "id": "2",
+      "title": "Wedding Photography Excellence",
+      "subtitle": "Your special day deserves perfection",
+      "imageDesktop": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+      "imageMobile": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=768&h=1024&fit=crop",
+      "active": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "title": "Portraits",
+      "description": "Professional portrait photography services",
+      "slug": "portraits",
+      "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "headerImage": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
+      "subcategories": [
+        {
+          "id": "1",
+          "title": "Family Portraits",
+          "description": "Beautiful family memories captured forever",
+          "image": "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+          "redirectLink": "https://example.com/family-portraits"
+        },
+        {
+          "id": "2",
+          "title": "Corporate Headshots",
+          "description": "Professional headshots for business professionals",
+          "image": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+          "redirectLink": "https://example.com/corporate-headshots"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Events",
+      "description": "Comprehensive event photography coverage",
+      "slug": "events",
+      "image": "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "headerImage": "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
+      "subcategories": [
+        {
+          "id": "3",
+          "title": "Wedding Photography",
+          "description": "Complete wedding day coverage from ceremony to reception",
+          "image": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+          "redirectLink": "https://example.com/wedding-photography"
+        },
+        {
+          "id": "4",
+          "title": "Corporate Events",
+          "description": "Professional documentation of your business events",
+          "image": "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+          "redirectLink": "https://example.com/corporate-events"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Commercial",
+      "description": "Professional commercial photography services",
+      "slug": "commercial",
+      "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "headerImage": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
+      "subcategories": [
+        {
+          "id": "5",
+          "title": "Product Photography",
+          "description": "High-quality product shots for your business",
+          "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+          "redirectLink": "https://example.com/product-photography"
+        },
+        {
+          "id": "6",
+          "title": "Real Estate",
+          "description": "Professional property photography services",
+          "image": "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+          "redirectLink": "https://example.com/real-estate"
+        }
+      ]
+    }
+  ],
+  "occasions": [
+    {
+      "id": "1",
+      "title": "Valentine's Day",
+      "description": "Romantic couple photography sessions",
+      "slug": "valentines-day",
+      "image": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      "redirectLink": "https://example.com/valentines-special"
+    },
+    {
+      "id": "2",
+      "title": "Graduation",
+      "description": "Celebrate your academic achievement",
+      "slug": "graduation",
+      "image": "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      "redirectLink": "https://example.com/graduation-photos"
+    },
+    {
+      "id": "3",
+      "title": "Baby Shower",
+      "description": "Beautiful maternity and baby photography",
+      "slug": "baby-shower",
+      "image": "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      "redirectLink": "https://example.com/baby-photography"
+    }
+  ],
+  "advertisements": [
+    {
+      "id": "1",
+      "title": "Summer Special Offer",
+      "description": "Get 20% off on all portrait sessions this summer!",
+      "image": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      "redirectLink": "https://example.com/summer-special",
+      "active": true,
+      "position": "home-middle"
+    },
+    {
+      "id": "2",
+      "title": "Wedding Package Deal",
+      "description": "Complete wedding photography starting from $999",
+      "image": "https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      "redirectLink": "https://example.com/wedding-package",
+      "active": true,
+      "position": "floating"
+    },
+    {
+      "id": "3",
+      "title": "Corporate Photography",
+      "description": "Professional corporate headshots and team photos",
+      "image": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      "redirectLink": "https://example.com/corporate-photography",
+      "active": false,
+      "position": "category-top"
+    }
+  ]
+}
