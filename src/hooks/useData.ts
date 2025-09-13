@@ -79,7 +79,7 @@ export const useData = (): UseDataReturn => {
 
       // Production or no localStorage data: Load from data.json
       console.log('🌐 Loading from data.json (Production Mode)');
-      const response = await fetch('/src/data/data.json');
+      const response = await fetch('./data.json');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
