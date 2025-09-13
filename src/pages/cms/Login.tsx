@@ -15,7 +15,7 @@ const Login: React.FC = () => {
       localStorage.setItem('cms-authenticated', 'true');
       navigate('/cms');
     } else {
-      setError('Invalid credentials. Use admin/admin123');
+      setError('Invalid credentials. ');
     }
   };
 
@@ -76,13 +76,7 @@ const Login: React.FC = () => {
           </button>
         </form>
 
-        <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-          <p className="text-sm text-gray-600">
-            <strong>Demo Credentials:</strong><br />
-            Username: admin<br />
-            Password: admin123
-          </p>
-        </div>
+
       </div>
     </div>
   );

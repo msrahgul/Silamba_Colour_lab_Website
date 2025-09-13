@@ -16,6 +16,11 @@ export const useData = (): UseDataReturn => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Check if running in development vs production
+  const isDevelopment = window.location.hostname === 'localhost' || 
+                       window.location.hostname === '127.0.0.1' ||
+                       window.location.hostname.includes('localhost');
+
   const validateData = (data: any): data is StudioData => {
     if (!data || typeof data !== 'object') return false;
     
@@ -39,9 +44,14 @@ export const useData = (): UseDataReturn => {
         ...category,
         headerImage: category.headerImage || category.image,
         subcategories: category.subcategories?.map((sub: any) => {
-          // Remove any invalid fields from subcategories
-          const { headerImage, ...validSubcategory } = sub;
-          return validSubcategory;
+          // Ensure subcategory has all required fields
+          return {
+            id: sub.id,
+            title: sub.title,
+            description: sub.description,
+            image: sub.image,
+            redirectLink: sub.redirectLink
+          };
         }) || []
       }));
     }
@@ -54,66 +64,72 @@ export const useData = (): UseDataReturn => {
       setLoading(true);
       setError(null);
 
-      // Check if we have data in localStorage first
-      const storedData = localStorage.getItem(STORAGE_KEY);
-      
-      if (storedData) {
-        try {
+      if (isDevelopment) {
+        // Development: Try localStorage first, then fallback to data.json
+        const storedData = localStorage.getItem(STORAGE_KEY);
+        if (storedData) {
+          console.log('🔧 Loading from localStorage (Development Mode)');
           const parsedData = JSON.parse(storedData);
-          
-          if (validateData(parsedData)) {
-            const enhancedData = addMissingFields(parsedData);
-            setData(enhancedData);
-            return;
-          } else {
-            console.warn('Invalid data format in localStorage, loading from file');
-            localStorage.removeItem(STORAGE_KEY);
-          }
-        } catch (parseError) {
-          console.error('Error parsing stored data:', parseError);
-          localStorage.removeItem(STORAGE_KEY);
+          const enhancedData = addMissingFields(parsedData);
+          setData(enhancedData);
+          setLoading(false);
+          return;
         }
       }
 
-      // Load from data.json
-      try {
-        const response = await fetch('/src/data/data.json');
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const jsonData = await response.json();
-        
-        if (!validateData(jsonData)) {
-          throw new Error('Invalid data format in data.json');
-        }
+      // Production or no localStorage data: Load from data.json
+      console.log('🌐 Loading from data.json (Production Mode)');
+      const response = await fetch('/src/data/data.json');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const jsonData = await response.json();
+      
+      if (!validateData(jsonData)) {
+        throw new Error('Invalid data format in data.json');
+      }
 
-        const enhancedData = addMissingFields(jsonData);
-        setData(enhancedData);
-        
-        // Save enhanced data to localStorage
+      const enhancedData = addMissingFields(jsonData);
+      setData(enhancedData);
+      
+      // In development, also save to localStorage for future use
+      if (isDevelopment) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(enhancedData));
-        
-      } catch (fetchError) {
-        console.error('Error loading data.json:', fetchError);
-        
-        // Fallback to default data structure
-        const fallbackData: StudioData = {
-          banners: [],
-          categories: [],
-          occasions: [],
-          advertisements: []
-        };
-        
-        setData(fallbackData);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(fallbackData));
-        setError('Unable to load data. Using default structure.');
       }
-
-    } catch (error) {
-      console.error('Error in loadData:', error);
-      setError(error instanceof Error ? error.message : 'An unknown error occurred');
+      
+    } catch (fetchError) {
+      console.error('Error loading data:', fetchError);
+      
+      // Fallback to default data structure
+      const fallbackData: StudioData = {
+        banners: [
+          {
+            id: "fallback-1",
+            title: "Welcome to Our Studio",
+            subtitle: "Professional photography services",
+            imageDesktop: "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+            imageMobile: "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=768&h=1024&fit=crop",
+            active: true
+          }
+        ],
+        categories: [
+          {
+            id: "fallback-1",
+            title: "Photography Services",
+            description: "Professional photography for all occasions",
+            slug: "services",
+            image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+            subcategories: []
+          }
+        ],
+        occasions: [],
+        advertisements: []
+      };
+      
+      setData(fallbackData);
+      setError('Unable to load data. Using default structure.');
     } finally {
       setLoading(false);
     }
@@ -127,18 +143,32 @@ export const useData = (): UseDataReturn => {
 
       const enhancedData = addMissingFields(newData);
       
-      // Immediately update the React state for real-time updates
+      // Update React state for immediate UI updates
       setData(enhancedData);
       
-      // Save to localStorage for persistence
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(enhancedData));
+      if (isDevelopment) {
+        // Development: Save to localStorage
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(enhancedData));
+        console.log('💾 Data saved to localStorage (Development Mode)');
+      } else {
+        // Production: Log data for manual update
+        console.log('\n🚨 PRODUCTION MODE - Manual Update Required');
+        console.log('📋 Copy this data to your data.json file:');
+        console.log('=== START DATA ===');
+        console.log(JSON.stringify(enhancedData, null, 2));
+        console.log('=== END DATA ===');
+        console.warn(`
+📝 To persist changes in production:
+1. Copy the JSON data above
+2. Update your src/data/data.json file
+3. Commit and push changes
+4. Redeploy to Netlify
+
+⚠️  Changes are temporary until data.json is updated!
+        `);
+      }
       
       setError(null);
-      
-      // Dispatch a custom event to notify other components of data changes
-      window.dispatchEvent(new CustomEvent('studioDataUpdated', { 
-        detail: enhancedData 
-      }));
       
     } catch (error) {
       console.error('Error updating data:', error);
@@ -147,45 +177,44 @@ export const useData = (): UseDataReturn => {
   };
 
   const refreshData = () => {
-    localStorage.removeItem(STORAGE_KEY);
     loadData();
   };
 
-  // Listen for data updates from other instances (e.g., multiple tabs)
-  useEffect(() => {
-    const handleStorageChange = (e: StorageEvent) => {
-      if (e.key === STORAGE_KEY && e.newValue) {
-        try {
-          const newData = JSON.parse(e.newValue);
-          if (validateData(newData)) {
-            setData(addMissingFields(newData));
-          }
-        } catch (error) {
-          console.error('Error handling storage change:', error);
-        }
-      }
-    };
-
-    const handleDataUpdate = (event: CustomEvent) => {
-      // Handle custom data update events
-      const newData = event.detail;
-      if (validateData(newData)) {
-        setData(addMissingFields(newData));
-      }
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-    window.addEventListener('studioDataUpdated', handleDataUpdate as EventListener);
-
-    return () => {
-      window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener('studioDataUpdated', handleDataUpdate as EventListener);
-    };
-  }, []);
-
   useEffect(() => {
     loadData();
   }, []);
+
+  // Development helper functions
+  useEffect(() => {
+    if (isDevelopment && typeof window !== 'undefined') {
+      // Add helper functions to window object in development
+      (window as any).exportStudioData = () => {
+        if (data) {
+          console.log('📤 Exporting studio data for production...');
+          console.log('=== COPY TO data.json ===');
+          console.log(JSON.stringify(data, null, 2));
+          console.log('=== END DATA ===');
+          
+          // Also create downloadable file
+          const blob = new Blob([JSON.stringify(data, null, 2)], 
+                               { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'studio-data-export.json';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          
+          console.log('📁 Data exported as studio-data-export.json');
+        }
+      };
+      
+      console.log('🛠️  Development helpers available:');
+      console.log('   - exportStudioData() - Export current data for production');
+    }
+  }, [data, isDevelopment]);
 
   return { 
     data, 

@@ -1,149 +1,56 @@
 {
   "banners": [
     {
-      "id": "1",
-      "title": "Capture Life's Beautiful Moments",
-      "subtitle": "Professional photography for every occasion",
-      "imageDesktop": "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
-      "imageMobile": "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=768&h=1024&fit=crop",
-      "active": true
-    },
-    {
-      "id": "2",
-      "title": "Wedding Photography Excellence",
-      "subtitle": "Your special day deserves perfection",
-      "imageDesktop": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
-      "imageMobile": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=768&h=1024&fit=crop",
+      "id": "1757745042954",
+      "title": "Banner 1",
+      "subtitle": "",
+      "imageDesktop": "https://www.photoland.in/wp-content/uploads/2025/08/desktop-2025-Aug-premium-photo-frame-1024x323.jpg",
+      "imageMobile": "https://www.photoland.in/wp-content/uploads/2025/08/mobile-2025-Aug-premium-photo-frame.jpg",
       "active": true
     }
   ],
   "categories": [
     {
-      "id": "1",
-      "title": "Portraits",
-      "description": "Professional portrait photography services",
-      "slug": "portraits",
-      "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      "headerImage": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
+      "id": "1757746214019",
+      "title": "Photo prints",
+      "description": "",
+      "slug": "photo-prints",
+      "image": "https://www.photoland.in/wp-content/uploads/2022/04/Photo-prints-Home-page-510x510.jpg",
+      "headerImage": "https://www.photoland.in/wp-content/uploads/2019/11/banner_Photo-Printing-1900x450.jpg",
       "subcategories": [
         {
-          "id": "1",
-          "title": "Family Portraits",
-          "description": "Beautiful family memories captured forever",
-          "image": "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-          "redirectLink": "https://example.com/family-portraits"
+          "id": "1757747032749",
+          "title": "Personalized Photo prints",
+          "description": "Capture life’s special moments with our premium photo prints. Perfect for birthdays, weddings, family gatherings, or festivals, each print is crafted with rich colors and clarity. From small keepsakes to large portraits, these prints preserve your happiest occasions, making them ideal for albums, gifts, and treasured memories.",
+          "image": "https://www.photoland.in/wp-content/uploads/2023/05/Photo-print-collections-1080x717.jpg",
+          "redirectLink": "https://www.photoland.in/custom-print/photo-prints/"
         },
         {
-          "id": "2",
-          "title": "Corporate Headshots",
-          "description": "Professional headshots for business professionals",
-          "image": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-          "redirectLink": "https://example.com/corporate-headshots"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Events",
-      "description": "Comprehensive event photography coverage",
-      "slug": "events",
-      "image": "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      "headerImage": "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
-      "subcategories": [
-        {
-          "id": "3",
-          "title": "Wedding Photography",
-          "description": "Complete wedding day coverage from ceremony to reception",
-          "image": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-          "redirectLink": "https://example.com/wedding-photography"
+          "id": "1757748867052",
+          "title": "Photo Enlargment",
+          "description": "Transform your favorite memories into stunning photo enlargements. Perfect for home, office, or special gifts, each piece is crafted with vibrant colors and sharp detail. From family portraits to artistic shots, these enlargements make any space more personal and eye-catching, creating lasting impressions and treasured keepsakes.",
+          "image": "https://www.photoland.in/wp-content/uploads/2022/03/enlargement_print-10-600x600.jpg",
+          "redirectLink": "https://www.photoland.in/custom-print/photo-enlargement/"
         },
         {
-          "id": "4",
-          "title": "Corporate Events",
-          "description": "Professional documentation of your business events",
-          "image": "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-          "redirectLink": "https://example.com/corporate-events"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Commercial",
-      "description": "Professional commercial photography services",
-      "slug": "commercial",
-      "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      "headerImage": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
-      "subcategories": [
-        {
-          "id": "5",
-          "title": "Product Photography",
-          "description": "High-quality product shots for your business",
-          "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-          "redirectLink": "https://example.com/product-photography"
-        },
-        {
-          "id": "6",
-          "title": "Real Estate",
-          "description": "Professional property photography services",
-          "image": "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-          "redirectLink": "https://example.com/real-estate"
+          "id": "1757749812740",
+          "title": "Polaroid Prints",
+          "description": "Add charm to your celebrations with polaroid-style prints. Ideal for weddings, birthday parties, friendship moments, and travel memories, these vintage-style photos bring fun to scrapbooks, décor walls, and gifts. Their retro appeal makes every occasion unforgettable while keeping your memories stylish and timeless.",
+          "image": "https://www.photoland.in/wp-content/uploads/2023/02/Polaroid-Print-2-510x510.jpg",
+          "redirectLink": "https://www.photoland.in/custom-print/polaroid-prints/"
         }
       ]
     }
   ],
   "occasions": [
     {
-      "id": "1",
-      "title": "Valentine's Day",
-      "description": "Romantic couple photography sessions",
-      "slug": "valentines-day",
-      "image": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      "redirectLink": "https://example.com/valentines-special"
-    },
-    {
-      "id": "2",
-      "title": "Graduation",
-      "description": "Celebrate your academic achievement",
-      "slug": "graduation",
-      "image": "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      "redirectLink": "https://example.com/graduation-photos"
-    },
-    {
       "id": "3",
-      "title": "Baby Shower",
-      "description": "Beautiful maternity and baby photography",
-      "slug": "baby-shower",
-      "image": "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      "redirectLink": "https://example.com/baby-photography"
+      "title": "Birthday Gifts",
+      "description": "",
+      "slug": "Birthday-Gifts",
+      "image": "https://www.photoland.in/wp-content/uploads/2022/04/Birthday-Gifts-500x500.jpg",
+      "redirectLink": "https://www.photoland.in/birthday-gifts/"
     }
   ],
-  "advertisements": [
-    {
-      "id": "1",
-      "title": "Summer Special Offer",
-      "description": "Get 20% off on all portrait sessions this summer!",
-      "image": "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      "redirectLink": "https://example.com/summer-special",
-      "active": true,
-      "position": "home-middle"
-    },
-    {
-      "id": "2",
-      "title": "Wedding Package Deal",
-      "description": "Complete wedding photography starting from $999",
-      "image": "https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      "redirectLink": "https://example.com/wedding-package",
-      "active": true,
-      "position": "floating"
-    },
-    {
-      "id": "3",
-      "title": "Corporate Photography",
-      "description": "Professional corporate headshots and team photos",
-      "image": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      "redirectLink": "https://example.com/corporate-photography",
-      "active": false,
-      "position": "category-top"
-    }
-  ]
+  "advertisements": []
 }
