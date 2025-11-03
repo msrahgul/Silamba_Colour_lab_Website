@@ -79,7 +79,7 @@ export const useData = (): UseDataReturn => {
 
       // Production or no localStorage data: Load from data.json
       console.log('🌐 Loading from data.json (Production Mode)');
-      const response = await fetch('./data.json');
+      const response = await fetch('/src/data/data.json');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -104,62 +104,29 @@ export const useData = (): UseDataReturn => {
       
       // Fallback to default data structure
       const fallbackData: StudioData = {
-  banners: [
-    {
-      id: "1757745042954",
-      title: "Banner 1",
-      subtitle: "",
-      imageDesktop: "https://www.photoland.in/wp-content/uploads/2025/08/desktop-2025-Aug-premium-photo-frame-1024x323.jpg",
-      imageMobile: "https://www.photoland.in/wp-content/uploads/2025/08/mobile-2025-Aug-premium-photo-frame.jpg",
-      active: true
-    }
-  ],
-  categories: [
-    {
-      id: "1757746214019",
-      title: "Photo prints",
-      description: "",
-      slug: "photo-prints",
-      image: "https://www.photoland.in/wp-content/uploads/2022/04/Photo-prints-Home-page-510x510.jpg",
-      headerImage: "https://www.photoland.in/wp-content/uploads/2019/11/banner_Photo-Printing-1900x450.jpg",
-      subcategories: [
-        {
-          id: "1757747032749",
-          title: "Personalized Photo prints",
-          description: "Capture life’s special moments with our premium photo prints. Perfect for birthdays, weddings, family gatherings, or festivals, each print is crafted with rich colors and clarity. From small keepsakes to large portraits, these prints preserve your happiest occasions, making them ideal for albums, gifts, and treasured memories.",
-          image: "https://www.photoland.in/wp-content/uploads/2023/05/Photo-print-collections-1080x717.jpg",
-          redirectLink: "https://www.photoland.in/custom-print/photo-prints/"
-        },
-        {
-          id: "1757748867052",
-          title: "Photo Enlargment",
-          description: "Transform your favorite memories into stunning photo enlargements. Perfect for home, office, or special gifts, each piece is crafted with vibrant colors and sharp detail. From family portraits to artistic shots, these enlargements make any space more personal and eye-catching, creating lasting impressions and treasured keepsakes.",
-          image: "https://www.photoland.in/wp-content/uploads/2022/03/enlargement_print-10-600x600.jpg",
-          redirectLink: "https://www.photoland.in/custom-print/photo-enlargement/"
-        },
-        {
-          id: "1757749812740",
-          title: "Polaroid Prints",
-          description: "Add charm to your celebrations with polaroid-style prints. Ideal for weddings, birthday parties, friendship moments, and travel memories, these vintage-style photos bring fun to scrapbooks, décor walls, and gifts. Their retro appeal makes every occasion unforgettable while keeping your memories stylish and timeless.",
-          image: "https://www.photoland.in/wp-content/uploads/2023/02/Polaroid-Print-2-510x510.jpg",
-          redirectLink: "https://www.photoland.in/custom-print/polaroid-prints/"
-        }
-      ]
-    }
-  ],
-  occasions: [
-    {
-      id: "3",
-      title: "Birthday Gifts",
-      description: "",
-      slug: "Birthday-Gifts",
-      image: "https://www.photoland.in/wp-content/uploads/2022/04/Birthday-Gifts-500x500.jpg",
-      redirectLink: "https://www.photoland.in/birthday-gifts/"
-    }
-  ],
-  advertisements: []
-};
-
+        banners: [
+          {
+            id: "fallback-1",
+            title: "Welcome to Our Studio",
+            subtitle: "Professional photography services",
+            imageDesktop: "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+            imageMobile: "https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=768&h=1024&fit=crop",
+            active: true
+          }
+        ],
+        categories: [
+          {
+            id: "fallback-1",
+            title: "Photography Services",
+            description: "Professional photography for all occasions",
+            slug: "services",
+            image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+            subcategories: []
+          }
+        ],
+        occasions: [],
+        advertisements: []
+      };
       
       setData(fallbackData);
       setError('Unable to load data. Using default structure.');
