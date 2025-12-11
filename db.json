@@ -1,0 +1,14 @@
+{
+  "banner": {
+    "id": "banner-1",
+    "title": "Special Offers This Season!",
+    "subtitle": "Calender Festive Season",
+    "image": "https://www.photoland.in/wp-content/uploads/2025/10/desktop-2025-Calendar-Festival.jpg",
+    "ctaText": "Shop Now",
+    "ctaLink": "https://www.photoland.in/personalized-photo-gifts/calendars/",
+    "isActive": true
+  },
+  "categories": [],
+  "subcategories": [],
+  "occasions": []
+}

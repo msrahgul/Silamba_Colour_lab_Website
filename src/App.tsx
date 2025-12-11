@@ -1,30 +1,51 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Category from './pages/Category';
-import Occasion from './pages/Occasion';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Login from './pages/cms/Login';
-import Dashboard from './pages/cms/Dashboard';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import SubCategoryPage from "./pages/SubCategoryPage";
+import AdminLogin from "./pages/AdminLogin";
+import AdminLayout from "./pages/AdminLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminBanners from "./pages/admin/AdminBanners";
+import AdminCategories from "./pages/admin/AdminCategories";
+import AdminSubCategories from "./pages/admin/AdminSubCategories";
+import AdminOccasions from "./pages/admin/AdminOccasions";
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/cms/login" element={<Login />} />
-        <Route path="/cms" element={<Dashboard />} />
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="category/:slug" element={<Category />} />
-          <Route path="occasion/:slug" element={<Occasion />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-      </Routes>
-    </Router>
-  );
-}
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/category/:categoryId" element={<SubCategoryPage />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="banners" element={<AdminBanners />} />
+            <Route path="categories" element={<AdminCategories />} />
+            <Route path="subcategories" element={<AdminSubCategories />} />
+            <Route path="occasions" element={<AdminOccasions />} />
+          </Route>
+          
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
