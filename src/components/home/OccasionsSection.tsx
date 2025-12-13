@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { ChevronLeft, ChevronRight, ArrowRight, Gift } from "lucide-react";
+import { useRef, useState } from "react";
+import { ChevronLeft, ChevronRight, Gift, ExternalLink } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 import { Button } from "@/components/ui/button";
+import { RedirectModal } from "@/components/ui/RedirectModal";
 
 export const OccasionsSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [redirectState, setRedirectState] = useState<{ isOpen: boolean; url: string }>({
+    isOpen: false,
+    url: "",
+  });
+
   const { data: occasions = [] } = useQuery({
     queryKey: ["occasions"],
     queryFn: api.getOccasions,
@@ -14,7 +20,7 @@ export const OccasionsSection = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = 350;
+      const scrollAmount = 300;
       scrollRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -22,52 +28,39 @@ export const OccasionsSection = () => {
     }
   };
 
+  const handleOccasionClick = (url?: string) => {
+    if (url) {
+      setRedirectState({ isOpen: true, url });
+    }
+  };
+
   return (
-    <section className="py-16 lg:py-24 bg-secondary/30">
+    <section className="py-12 bg-secondary/20">
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10"
-        >
+        <div className="flex items-center justify-between mb-8">
           <div>
-            <div className="flex items-center gap-2 text-primary font-medium text-sm uppercase tracking-wider mb-2">
-              <Gift className="w-4 h-4" />
-              <span>Gifting Made Easy</span>
+            <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-1">
+              <Gift className="w-3 h-3" />
+              <span>Perfect For Every Moment</span>
             </div>
-            <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground">
+            <h2 className="font-display text-2xl lg:text-3xl font-bold text-foreground">
               Shop by Occasion
             </h2>
           </div>
 
-          {/* Navigation Arrows */}
           <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => scroll("left")}
-              className="rounded-full bg-background hover:bg-primary hover:text-primary-foreground transition-colors border-border/50"
-            >
-              <ChevronLeft className="w-5 h-5" />
+            <Button variant="outline" size="icon" onClick={() => scroll("left")} className="h-8 w-8 rounded-full">
+              <ChevronLeft className="w-4 h-4" />
             </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => scroll("right")}
-              className="rounded-full bg-background hover:bg-primary hover:text-primary-foreground transition-colors border-border/50"
-            >
-              <ChevronRight className="w-5 h-5" />
+            <Button variant="outline" size="icon" onClick={() => scroll("right")} className="h-8 w-8 rounded-full">
+              <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Horizontal Scroll */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto hide-scrollbar pb-8 -mx-4 px-4 snap-x snap-mandatory"
+          className="flex gap-4 overflow-x-auto hide-scrollbar -mx-4 px-4 snap-x snap-mandatory"
         >
           {occasions.map((occasion, index) => (
             <motion.div
@@ -76,42 +69,42 @@ export const OccasionsSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex-shrink-0 w-[280px] md:w-[320px] snap-center group cursor-pointer"
+              className="flex-shrink-0 w-[240px] snap-start cursor-pointer group"
+              onClick={() => handleOccasionClick(occasion.link)}
             >
-              <div className="h-full bg-card border border-border/50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                {/* Image Area */}
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={occasion.image}
-                    alt={occasion.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden mb-3">
+                <img
+                  src={occasion.image}
+                  alt={occasion.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
+
+                {/* Overlay Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h3 className="font-bold text-lg leading-none mb-1">{occasion.name}</h3>
+                  <p className="text-xs text-white/80 line-clamp-2">{occasion.description}</p>
                 </div>
 
-                {/* Content Area */}
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-display text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                      {occasion.name}
-                    </h3>
-                  </div>
-
-                  <p className="text-muted-foreground text-sm line-clamp-2 mb-4 h-10">
-                    {occasion.description}
-                  </p>
-
-                  <div className="flex items-center text-sm font-semibold text-primary gap-2 group/link">
-                    <span>Shop Collection</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                  </div>
+                {/* External Link Icon */}
+                <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-md p-1.5 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ExternalLink className="w-3 h-3" />
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      <RedirectModal
+        isOpen={redirectState.isOpen}
+        onClose={() => setRedirectState({ ...redirectState, isOpen: false })}
+        onConfirm={() => {
+          window.open(redirectState.url, "_blank");
+          setRedirectState(prev => ({ ...prev, isOpen: false }));
+        }}
+        url={redirectState.url}
+      />
     </section>
   );
 };

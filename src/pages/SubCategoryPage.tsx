@@ -1,15 +1,22 @@
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, ShoppingBag, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ArrowUpRight, Search, SlidersHorizontal } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { api } from "@/lib/api";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { RedirectModal } from "@/components/ui/RedirectModal";
 
 const SubCategoryPage = () => {
   const { categoryId } = useParams<{ categoryId: string }>();
+  const [redirectState, setRedirectState] = useState<{ isOpen: boolean; url: string }>({
+    isOpen: false,
+    url: "",
+  });
 
   const { data: categories = [], isLoading: catLoading } = useQuery({
     queryKey: ["categories"],
@@ -24,132 +31,115 @@ const SubCategoryPage = () => {
   const category = categories.find((c) => c.id === categoryId);
   const subCategories = allSubCategories.filter((s) => s.categoryId === categoryId);
 
-  if (catLoading || subLoading) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>
-    );
-  }
+  const handleProductClick = (url: string) => {
+    setRedirectState({ isOpen: true, url });
+  };
 
-  if (!category) {
-    return (
-      <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
-        <h1 className="text-3xl font-display font-bold mb-4 text-foreground">Category not found</h1>
-        <p className="text-muted-foreground mb-8">The category you are looking for does not exist.</p>
-        <Link to="/">
-          <Button>Return Home</Button>
-        </Link>
-      </div>
-    );
-  }
+  const confirmRedirect = () => {
+    window.open(redirectState.url, "_blank");
+    setRedirectState({ ...redirectState, isOpen: false });
+  };
+
+  if (catLoading || subLoading) return <div className="h-screen flex items-center justify-center bg-background"><div className="w-8 h-8 border-4 border-primary/20 border-t-primary rounded-full animate-spin" /></div>;
+
+  if (!category) return (
+    <div className="h-screen flex flex-col items-center justify-center bg-background space-y-4">
+      <h1 className="text-2xl font-bold">Category Not Found</h1>
+      <Link to="/"><Button variant="outline">Return Home</Button></Link>
+    </div>
+  );
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background font-sans">
       <Navbar />
 
-      <main className="flex-grow pt-20">
-        {/* Modern Header Section */}
-        <section className="relative bg-muted/30 py-12 lg:py-20 border-b border-border/50">
-          <div className="container mx-auto px-4 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="max-w-4xl"
-            >
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-6 transition-colors text-sm font-medium"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Collections
-              </Link>
+      <main className="pt-24 lg:pt-28 pb-20">
+        <div className="container mx-auto px-4 lg:px-8">
 
-              <h1 className="font-display text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                {category.name}
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                {category.description}
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Product Grid */}
-        <section className="container mx-auto px-4 lg:px-8 py-16">
-          <div className="flex items-center justify-between mb-8">
-            <p className="text-sm font-medium text-muted-foreground">
-              {subCategories.length} Products Found
+          {/* Simple Professional Header - No Big Image */}
+          <div className="max-w-4xl mb-12 border-b border-border/40 pb-8">
+            <Link to="/" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6 transition-colors">
+              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+            </Link>
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              {category.name}
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              {category.description}
             </p>
           </div>
 
-          {subCategories.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border rounded-3xl bg-muted/10">
-              <ShoppingBag className="w-16 h-16 text-muted-foreground/30 mb-4" />
-              <h3 className="text-xl font-semibold text-foreground mb-2">No Products Found</h3>
-              <p className="text-muted-foreground max-w-md text-center mb-6">
-                We haven't added any products to this category yet. Please check back later or browse other collections.
-              </p>
-              <Link to="/products">
-                <Button variant="outline">Browse All Categories</Button>
-              </Link>
+          {/* Controls */}
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
+            <div className="relative w-full sm:w-72">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Input placeholder="Search items..." className="pl-9" />
             </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {subCategories.map((subCat, index) => (
-                <motion.a
-                  key={subCat.id}
-                  href={subCat.externalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
+            <div className="text-sm text-muted-foreground font-medium">
+              {subCategories.length} Items Found
+            </div>
+          </div>
+
+          {/* Clean Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+            <AnimatePresence>
+              {subCategories.map((item, idx) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="group block bg-card border border-border/50 rounded-2xl overflow-hidden hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover:-translate-y-1"
+                  transition={{ duration: 0.3, delay: idx * 0.05 }}
+                  className="group cursor-pointer"
+                  onClick={() => handleProductClick(item.externalUrl)}
                 >
-                  {/* Image Container */}
-                  <div className="relative aspect-square overflow-hidden bg-muted">
+                  {/* Image */}
+                  <div className="relative aspect-square overflow-hidden bg-muted rounded-xl mb-4 border border-border/50">
                     <img
-                      src={subCat.image}
-                      alt={subCat.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-
-                    {/* Overlay Action Button */}
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="bg-background/90 backdrop-blur-sm text-foreground px-6 py-2 rounded-full font-medium text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2">
-                        View Details <ExternalLink className="w-3 h-3" />
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                      <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-lg text-black">
+                        <ArrowUpRight className="w-4 h-4" />
                       </div>
                     </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="p-5">
-                    <div className="mb-2">
-                      <h3 className="font-display text-lg font-bold text-foreground line-clamp-1 group-hover:text-primary transition-colors">
-                        {subCat.name}
-                      </h3>
-                    </div>
-
-                    <div className="flex items-center justify-between mt-4">
-                      <div className="flex flex-col">
-                        <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Starting at</span>
-                        <span className="text-lg font-bold text-primary">{subCat.price || "Contact for Price"}</span>
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
+                  {/* Text */}
+                  <div>
+                    <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
+                      {item.name}
+                    </h3>
+                    <div className="flex items-center justify-between mt-1">
+                      <span className="text-sm text-muted-foreground">Detailed View</span>
+                      {item.price && (
+                        <span className="font-medium text-foreground">{item.price}</span>
+                      )}
                     </div>
                   </div>
-                </motion.a>
+                </motion.div>
               ))}
-            </div>
-          )}
-        </section>
+            </AnimatePresence>
+            {subCategories.length === 0 && (
+              <div className="col-span-full py-20 text-center text-muted-foreground">
+                No products found in this category.
+              </div>
+            )}
+          </div>
+        </div>
       </main>
 
       <Footer />
+
+      <RedirectModal
+        isOpen={redirectState.isOpen}
+        onClose={() => setRedirectState({ ...redirectState, isOpen: false })}
+        onConfirm={confirmRedirect}
+        url={redirectState.url}
+      />
     </div>
   );
 };

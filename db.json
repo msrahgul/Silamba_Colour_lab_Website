@@ -26,37 +26,43 @@
       "id": "cat-frames",
       "name": "Photo Frames",
       "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80",
-      "description": "Elegant wall and table frames to preserve your memories."
+      "description": "Elegant wall and table frames to preserve your memories.",
+      "isFeatured": true
     },
     {
       "id": "cat-printing",
       "name": "Printing Services",
       "image": "https://images.unsplash.com/photo-1562564025-51dc115152f2?w=800&q=80",
-      "description": "High-quality printing for business cards, flyers, and documents."
+      "description": "High-quality printing for business cards, flyers, and documents.",
+      "isFeatured": true
     },
     {
       "id": "cat-wooden",
       "name": "Wooden Gifts",
       "image": "https://images.unsplash.com/photo-1610486483320-a63d917f694a?w=800&q=80",
-      "description": "Laser engraved wooden plaques and name plates."
+      "description": "Laser engraved wooden plaques and name plates.",
+      "isFeatured": true
     },
     {
       "id": "cat-personalized",
       "name": "Personalized Gifts",
       "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80",
-      "description": "Custom mugs, pillows, and gifts for your loved ones."
+      "description": "Custom mugs, pillows, and gifts for your loved ones.",
+      "isFeatured": true
     },
     {
       "id": "cat-stationery",
       "name": "Stationery",
       "image": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80",
-      "description": "School labels, ID cards, certificates, and office supplies."
+      "description": "School labels, ID cards, certificates, and office supplies.",
+      "isFeatured": true
     },
     {
       "id": "cat-corporate",
       "name": "Corporate Gifts",
       "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80",
-      "description": "Bulk gifting solutions, awards, and promotional items."
+      "description": "Bulk gifting solutions, awards, and promotional items.",
+      "isFeatured": true
     }
   ],
   "subcategories": [

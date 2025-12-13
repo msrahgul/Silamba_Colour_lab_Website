@@ -17,6 +17,7 @@ export interface Category {
   name: string;
   image: string;
   description: string;
+  isFeatured?: boolean; // Added for Home Page selection
 }
 
 export interface SubCategory {
@@ -28,12 +29,49 @@ export interface SubCategory {
   price?: string;
 }
 
+
 export interface Occasion {
   id: string;
   name: string;
   image: string;
   description: string;
+  link?: string; // Field for the redirect URL
 }
+
+export interface Offer {
+  id: string;
+  title: string;
+  description: string;
+  discount: string; // e.g., "Flat 20% OFF"
+  image: string;
+  link: string;
+  code?: string; // e.g., "SUMMER20"
+  isActive: boolean;
+}
+
+// ... existing defaults (This comment is part of the instruction to locate the area, but in replacement content we just provide the new data)
+
+export const defaultOffers: Offer[] = [
+  {
+    id: "offer-1",
+    title: "Wedding Bundles",
+    description: "Premium albums + 2 framed prints",
+    discount: "15% OFF",
+    image: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=800&q=80",
+    link: "/category/wedding",
+    code: "WED15",
+    isActive: true
+  },
+  {
+    id: "offer-2",
+    title: "Custom Mugs",
+    description: "Buy 2 Get 1 Free on all magic mugs",
+    discount: "B2G1 FREE",
+    image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&q=80",
+    link: "/category/mugs",
+    isActive: true
+  }
+];
 
 // Changed from defaultBanner to defaultBanners array
 export const defaultBanners: Banner[] = [
@@ -44,7 +82,7 @@ export const defaultBanners: Banner[] = [
     image: "https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=1920&q=80",
     mobileImage: "https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=800&q=80",
     ctaText: "Shop Now",
-    ctaLink: "/products",
+    ctaLink: "/#products",
     isActive: true,
   }
 ];

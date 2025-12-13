@@ -1,4 +1,4 @@
-import { Banner, Category, SubCategory, Occasion } from "@/data/mockData";
+import { Banner, Category, SubCategory, Occasion, Offer } from "@/data/mockData";
 
 const API_URL = "http://localhost:3000";
 
@@ -133,5 +133,31 @@ export const api = {
     deleteOccasion: async (id: string): Promise<void> => {
         const res = await fetch(`${API_URL}/occasions/${id}`, { method: "DELETE" });
         if (!res.ok) throw new Error("Failed to delete occasion");
+    },
+
+    // Offers (New)
+    getOffers: async (): Promise<Offer[]> => {
+        const res = await fetch(`${API_URL}/offers`);
+        if (!res.ok) return [];
+        return res.json();
+    },
+    createOffer: async (offer: Offer): Promise<Offer> => {
+        const res = await fetch(`${API_URL}/offers`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(offer),
+        });
+        return res.json();
+    },
+    updateOffer: async (offer: Offer): Promise<Offer> => {
+        const res = await fetch(`${API_URL}/offers/${offer.id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(offer),
+        });
+        return res.json();
+    },
+    deleteOffer: async (id: string): Promise<void> => {
+        await fetch(`${API_URL}/offers/${id}`, { method: "DELETE" });
     },
 };
