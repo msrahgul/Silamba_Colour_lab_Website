@@ -6,6 +6,7 @@ export interface Banner {
   title: string;
   subtitle: string;
   image: string;
+  mobileImage: string;
   ctaText: string;
   ctaLink: string;
   isActive: boolean;
@@ -34,15 +35,19 @@ export interface Occasion {
   description: string;
 }
 
-export const defaultBanner: Banner = {
-  id: "banner-1",
-  title: "Special Offers This Season!",
-  subtitle: "Get up to 30% off on all photo frames and wooden gifts. Limited time offer!",
-  image: "https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=800&q=80",
-  ctaText: "Shop Now",
-  ctaLink: "#products",
-  isActive: true,
-};
+// Changed from defaultBanner to defaultBanners array
+export const defaultBanners: Banner[] = [
+  {
+    id: "banner-1",
+    title: "Special Offers",
+    subtitle: "Seasonal Sale",
+    image: "https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=1920&q=80",
+    mobileImage: "https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=800&q=80",
+    ctaText: "Shop Now",
+    ctaLink: "/products",
+    isActive: true,
+  }
+];
 
 export const defaultCategories: Category[] = [
 ];
@@ -91,7 +96,7 @@ export const initializeData = (): void => {
   if (typeof window === "undefined") return;
 
   if (!localStorage.getItem(STORAGE_KEYS.BANNER)) {
-    localStorage.setItem(STORAGE_KEYS.BANNER, JSON.stringify(defaultBanner));
+    localStorage.setItem(STORAGE_KEYS.BANNER, JSON.stringify(defaultBanners[0]));
   }
   if (!localStorage.getItem(STORAGE_KEYS.CATEGORIES)) {
     localStorage.setItem(STORAGE_KEYS.CATEGORIES, JSON.stringify(defaultCategories));

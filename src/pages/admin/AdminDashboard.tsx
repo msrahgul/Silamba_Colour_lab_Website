@@ -2,18 +2,18 @@ import { Image, Grid3X3, Layers, Gift, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/api";
-import { defaultBanner } from "@/data/mockData";
+
 
 const AdminDashboard = () => {
-  const { data: banner = defaultBanner } = useQuery({ queryKey: ["banner"], queryFn: api.getBanner });
+  const { data: banners = [] } = useQuery({ queryKey: ["banners"], queryFn: api.getBanners });
   const { data: categories = [] } = useQuery({ queryKey: ["categories"], queryFn: api.getCategories });
   const { data: subCategories = [] } = useQuery({ queryKey: ["subcategories"], queryFn: api.getSubCategories });
   const { data: occasions = [] } = useQuery({ queryKey: ["occasions"], queryFn: api.getOccasions });
 
   const stats = [
     {
-      title: "Active Banner",
-      value: banner.isActive ? "1" : "0",
+      title: "Active Banners",
+      value: banners.filter(b => b.isActive).length.toString(),
       icon: Image,
       link: "/admin/banners",
       color: "bg-blue-500",
@@ -115,38 +115,8 @@ const AdminDashboard = () => {
       </div>
 
       {/* Recent Updates Placeholder */}
-      <div className="bg-card rounded-xl p-6 shadow-card">
-        <h3 className="font-display text-lg font-semibold text-foreground mb-4">
-          How to Use
-        </h3>
-        <ul className="space-y-2 text-muted-foreground">
-          <li className="flex items-start gap-2">
-            <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm shrink-0">
-              1
-            </span>
-            <span>Use the <strong>Banners</strong> section to update the pop-up offer that appears to visitors.</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm shrink-0">
-              2
-            </span>
-            <span>Add or edit <strong>Categories</strong> to organize your products into main groups.</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm shrink-0">
-              3
-            </span>
-            <span>Create <strong>Sub-Categories</strong> with external redirect URLs to your online store.</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm shrink-0">
-              4
-            </span>
-            <span>Update <strong>Occasions</strong> to highlight seasonal gift ideas.</span>
-          </li>
-        </ul>
-      </div>
-    </div>
+            </div>
+
   );
 };
 

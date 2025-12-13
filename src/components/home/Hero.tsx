@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Camera, Star, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -49,7 +50,7 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg lg:text-xl text-background/80 leading-relaxed mb-8"
           >
-            Professional photography services and premium photo products. 
+            Professional photography services and premium photo products.
             Transform your memories into timeless keepsakes with our expert craftsmanship.
           </motion.p>
 
@@ -60,10 +61,12 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-wrap gap-4 mb-12"
           >
-            <Button size="lg" className="group">
-              Explore Products
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/products">
+              <Button size="lg" className="group">
+                Explore Products
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="bg-transparent border-background/30 text-background hover:bg-background/10">
               Contact Us
             </Button>

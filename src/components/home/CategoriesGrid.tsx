@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/api";
@@ -11,7 +11,7 @@ export const CategoriesGrid = () => {
   });
 
   return (
-    <section id="products" className="py-16 lg:py-24">
+    <section id="products" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <motion.div
@@ -19,57 +19,65 @@ export const CategoriesGrid = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-wider mb-2 block">
-            Our Products
-          </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+            <Sparkles className="w-3 h-3" />
+            <span>Our Collections</span>
+          </div>
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Explore Our Collections
+            Browse by Category
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Discover handpicked masterpieces designed just for you.
-            Crafted with care, guaranteed to impress.
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            Find the perfect gift or service from our wide range of offerings.
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <Link
                 to={`/category/${category.id}`}
-                className="group block relative h-80 rounded-2xl overflow-hidden shadow-card hover-lift"
+                className="group flex flex-col h-full bg-card border border-border/50 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
-                {/* Image */}
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                {/* Image Container */}
+                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  {/* Subtle highlight overlay on hover */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
+                </div>
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                {/* Content Container */}
+                <div className="flex flex-col flex-grow p-6 lg:p-8">
+                  <div className="flex items-start justify-between gap-4 mb-3">
+                    <h3 className="font-display text-xl lg:text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors">
+                      {category.name}
+                    </h3>
+                  </div>
 
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-display text-2xl font-semibold text-background mb-2 group-hover:text-primary transition-colors">
-                    {category.name}
-                  </h3>
-                  <p className="text-background/70 text-sm mb-4 line-clamp-2">
+                  <p className="text-muted-foreground leading-relaxed mb-6 line-clamp-2">
                     {category.description}
                   </p>
 
-                  {/* Arrow */}
-                  <div className="flex items-center gap-2 text-primary font-medium text-sm">
-                    <span>Explore</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                  {/* Action Footer */}
+                  <div className="mt-auto flex items-center justify-between pt-4 border-t border-border/50">
+                    <span className="text-sm font-medium text-foreground/80 group-hover:text-primary transition-colors">
+                      View Collection
+                    </span>
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <ArrowRight className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors" />
+                    </div>
                   </div>
                 </div>
               </Link>

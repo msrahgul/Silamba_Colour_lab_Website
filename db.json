@@ -1,14 +1,204 @@
 {
   "banner": {
     "id": "banner-1",
-    "title": "Special Offers This Season!",
-    "subtitle": "Calender Festive Season",
-    "image": "https://www.photoland.in/wp-content/uploads/2025/10/desktop-2025-Calendar-Festival.jpg",
-    "ctaText": "Shop Now",
-    "ctaLink": "https://www.photoland.in/personalized-photo-gifts/calendars/",
+    "title": "Capture Your Perfect Moments",
+    "subtitle": "Premium Photo Printing & Personalized Gifts",
+    "image": "https://images.unsplash.com/photo-1554048612-387768052bf7?w=1920&q=80",
+    "mobileImage": "https://images.unsplash.com/photo-1554048612-387768052bf7?w=800&q=80",
+    "ctaText": "Explore Products",
+    "ctaLink": "/products",
     "isActive": true
   },
-  "categories": [],
-  "subcategories": [],
-  "occasions": []
+  "banners": [
+    {
+      "id": "banner-1",
+      "title": "Special Offers This Season!",
+      "subtitle": "Calender Festive Season",
+      "image": "https://www.photoland.in/wp-content/uploads/2025/10/desktop-2025-Calendar-Festival.jpg",
+      "mobileImage": "https://www.photoland.in/wp-content/uploads/2025/10/desktop-2025-Calendar-Festival.jpg",
+      "ctaText": "Shop Now",
+      "ctaLink": "https://www.photoland.in/personalized-photo-gifts/calendars/",
+      "isActive": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-frames",
+      "name": "Photo Frames",
+      "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80",
+      "description": "Elegant wall and table frames to preserve your memories."
+    },
+    {
+      "id": "cat-printing",
+      "name": "Printing Services",
+      "image": "https://images.unsplash.com/photo-1562564025-51dc115152f2?w=800&q=80",
+      "description": "High-quality printing for business cards, flyers, and documents."
+    },
+    {
+      "id": "cat-wooden",
+      "name": "Wooden Gifts",
+      "image": "https://images.unsplash.com/photo-1610486483320-a63d917f694a?w=800&q=80",
+      "description": "Laser engraved wooden plaques and name plates."
+    },
+    {
+      "id": "cat-personalized",
+      "name": "Personalized Gifts",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80",
+      "description": "Custom mugs, pillows, and gifts for your loved ones."
+    },
+    {
+      "id": "cat-stationery",
+      "name": "Stationery",
+      "image": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80",
+      "description": "School labels, ID cards, certificates, and office supplies."
+    },
+    {
+      "id": "cat-corporate",
+      "name": "Corporate Gifts",
+      "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80",
+      "description": "Bulk gifting solutions, awards, and promotional items."
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "sub-led-frame",
+      "categoryId": "cat-frames",
+      "name": "LED Photo Frames",
+      "image": "https://images.unsplash.com/photo-1617342600057-79cb8a99496e?w=800&q=80",
+      "price": "₹2,790",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-collage-frame",
+      "categoryId": "cat-frames",
+      "name": "Collage Photo Frames",
+      "image": "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800&q=80",
+      "price": "₹2,216",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-mdf-frame",
+      "categoryId": "cat-frames",
+      "name": "MDF Photo Frames",
+      "image": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=800&q=80",
+      "price": "₹490",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-lamination",
+      "categoryId": "cat-frames",
+      "name": "Laminated Frames",
+      "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+      "price": "₹140",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-visiting-cards",
+      "categoryId": "cat-printing",
+      "name": "Visiting Cards",
+      "image": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&q=80",
+      "price": "₹1.90/piece",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-flyers",
+      "categoryId": "cat-printing",
+      "name": "Flyers & Leaflets",
+      "image": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80",
+      "price": "₹15/piece",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-brochures",
+      "categoryId": "cat-printing",
+      "name": "Brochures",
+      "image": "https://images.unsplash.com/photo-1576158189873-19f80735701a?w=800&q=80",
+      "price": "₹52/piece",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-labels",
+      "categoryId": "cat-printing",
+      "name": "Labels & Stickers",
+      "image": "https://images.unsplash.com/photo-1620406856550-9d3d3a0c4436?w=800&q=80",
+      "price": "₹1.60/piece",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-wood-engrave",
+      "categoryId": "cat-wooden",
+      "name": "Engraved Wooden Plaques",
+      "image": "https://images.unsplash.com/photo-1533226458520-6f71cffe3695?w=800&q=80",
+      "price": "₹790",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-name-board",
+      "categoryId": "cat-wooden",
+      "name": "Wooden Name Boards",
+      "image": "https://images.unsplash.com/photo-1544258925-517597da4719?w=800&q=80",
+      "price": "₹399",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-mugs",
+      "categoryId": "cat-personalized",
+      "name": "Custom Mugs",
+      "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&q=80",
+      "price": "₹250",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-calendars",
+      "categoryId": "cat-personalized",
+      "name": "Photo Calendars",
+      "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80",
+      "price": "₹229",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-idcards",
+      "categoryId": "cat-stationery",
+      "name": "ID Cards",
+      "image": "https://images.unsplash.com/photo-1589330694653-4a8b74c6478d?w=800&q=80",
+      "price": "₹75",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-certificates",
+      "categoryId": "cat-stationery",
+      "name": "Certificate Printing",
+      "image": "https://images.unsplash.com/photo-1589330694653-4a8b74c6478d?w=800&q=80",
+      "price": "₹30",
+      "externalUrl": ""
+    },
+    {
+      "id": "sub-acrylic-awards",
+      "categoryId": "cat-corporate",
+      "name": "Acrylic Awards",
+      "image": "https://images.unsplash.com/photo-1569424654921-66795f9d1462?w=800&q=80",
+      "price": "₹499",
+      "externalUrl": ""
+    }
+  ],
+  "occasions": [
+    {
+      "id": "occ-wedding",
+      "name": "Wedding",
+      "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+      "description": "Albums, frames, and gifts for the big day."
+    },
+    {
+      "id": "occ-birthday",
+      "name": "Birthday",
+      "image": "https://images.unsplash.com/photo-1530103862676-de3c9da59af7?w=800&q=80",
+      "description": "Personalized gifts to make birthdays special."
+    },
+    {
+      "id": "occ-corporate",
+      "name": "Corporate Events",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80",
+      "description": "Bulk printing and awards for company events."
+    }
+  ]
 }

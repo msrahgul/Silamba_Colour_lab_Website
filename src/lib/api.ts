@@ -3,20 +3,49 @@ import { Banner, Category, SubCategory, Occasion } from "@/data/mockData";
 const API_URL = "http://localhost:3000";
 
 export const api = {
-    // Banner
-    getBanner: async (): Promise<Banner> => {
-        const res = await fetch(`${API_URL}/banner`);
-        if (!res.ok) throw new Error("Failed to fetch banner");
+    // Banners (Multiple)
+    getBanners: async (): Promise<Banner[]> => {
+        const res = await fetch(`${API_URL}/banners`);
+        if (!res.ok) {
+            // Fallback for initial setup if /banners doesn't exist yet, try /banner
+            // or just return empty array to prevent crash
+            try {
+                const legacyRes = await fetch(`${API_URL}/banner`);
+                if (legacyRes.ok) {
+                    const legacyData = await legacyRes.json();
+                    return Array.isArray(legacyData) ? legacyData : [legacyData];
+                }
+            } catch (e) {
+                console.warn("Could not fetch banners", e);
+            }
+            return [];
+        }
         return res.json();
     },
+
+    createBanner: async (banner: Omit<Banner, "id">): Promise<Banner> => {
+        const res = await fetch(`${API_URL}/banners`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(banner),
+        });
+        if (!res.ok) throw new Error("Failed to create banner");
+        return res.json();
+    },
+
     updateBanner: async (banner: Banner): Promise<Banner> => {
-        const res = await fetch(`${API_URL}/banner`, {
+        const res = await fetch(`${API_URL}/banners/${banner.id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(banner),
         });
         if (!res.ok) throw new Error("Failed to update banner");
         return res.json();
+    },
+
+    deleteBanner: async (id: string): Promise<void> => {
+        const res = await fetch(`${API_URL}/banners/${id}`, { method: "DELETE" });
+        if (!res.ok) throw new Error("Failed to delete banner");
     },
 
     // Categories
