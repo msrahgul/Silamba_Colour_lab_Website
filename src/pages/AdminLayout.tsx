@@ -12,6 +12,7 @@ import {
   Menu,
   X,
   Home,
+  Tag,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { STORAGE_KEYS } from "@/data/mockData";
@@ -23,6 +24,7 @@ const sidebarLinks = [
   { name: "Categories", path: "/admin/categories", icon: Grid3X3 },
   { name: "Sub-Categories", path: "/admin/subcategories", icon: Layers },
   { name: "Occasions", path: "/admin/occasions", icon: Gift },
+  { name: "Special Offers", path: "/admin/offers", icon: Tag },
 ];
 
 const AdminLayout = () => {
@@ -51,9 +53,8 @@ const AdminLayout = () => {
     <div className="min-h-screen bg-muted flex">
       {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border transform transition-transform duration-300 lg:translate-x-0 lg:static ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border transform transition-transform duration-300 lg:translate-x-0 lg:static ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="flex flex-col h-full">
           {/* Logo */}
@@ -82,11 +83,10 @@ const AdminLayout = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setSidebarOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
-                    isActive
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                  }`}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    }`}
                 >
                   <link.icon className="w-5 h-5" />
                   <span className="font-medium">{link.name}</span>

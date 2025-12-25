@@ -1,5 +1,6 @@
 // Mock Data for Silamba Colour Lab
 // All data is stored and managed via localStorage with these as defaults
+// All data is stored and managed via localStorage with these as defaults
 
 export interface Banner {
   id: string;
