@@ -16,6 +16,7 @@ import { Switch } from "@/components/ui/switch"; // Added
 import { toast } from "@/hooks/use-toast";
 import { api } from "@/lib/api";
 import { Category } from "@/data/mockData";
+import { ImageUploadField } from "@/components/admin/ImageUploadField";
 
 const AdminCategories = () => {
   const queryClient = useQueryClient();
@@ -121,12 +122,10 @@ const AdminCategories = () => {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="image">Image URL</Label>
-                <Input
-                  id="image"
-                  value={formData.image}
-                  onChange={e => setFormData({ ...formData, image: e.target.value })}
-                  required
+                <ImageUploadField
+                  label="Category Image"
+                  value={formData.image || ""}
+                  onChange={(url) => setFormData({ ...formData, image: url })}
                 />
               </div>
               <div className="space-y-2">

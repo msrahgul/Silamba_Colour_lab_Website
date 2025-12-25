@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { SubCategory } from "@/data/mockData";
 import { api } from "@/lib/api";
+import { ImageUploadField } from "@/components/admin/ImageUploadField";
 
 const AdminSubCategories = () => {
   const queryClient = useQueryClient();
@@ -255,14 +256,10 @@ const AdminSubCategories = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="image">Image URL</Label>
-                <Input
-                  id="image"
-                  value={formData.image}
-                  onChange={(e) =>
-                    setFormData({ ...formData, image: e.target.value })
-                  }
-                  placeholder="https://..."
+                <ImageUploadField
+                  label="Product Image"
+                  value={formData.image || ""}
+                  onChange={(url) => setFormData({ ...formData, image: url })}
                 />
               </div>
 

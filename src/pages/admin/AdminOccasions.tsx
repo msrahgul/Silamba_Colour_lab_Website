@@ -15,6 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { api } from "@/lib/api";
 import { Occasion } from "@/data/mockData";
+import { ImageUploadField } from "@/components/admin/ImageUploadField";
 
 const AdminOccasions = () => {
   const queryClient = useQueryClient();
@@ -119,12 +120,10 @@ const AdminOccasions = () => {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="image">Image URL</Label>
-                <Input
-                  id="image"
-                  value={formData.image}
-                  onChange={e => setFormData({ ...formData, image: e.target.value })}
-                  required
+                <ImageUploadField
+                  label="Occasion Image"
+                  value={formData.image || ""}
+                  onChange={(url) => setFormData({ ...formData, image: url })}
                 />
               </div>
               <div className="space-y-2">

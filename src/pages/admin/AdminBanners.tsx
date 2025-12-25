@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Save, Plus, Trash2, Smartphone, Monitor, Eye, EyeOff } from "lucide-react";
+import { Save, Plus, Trash2, Smartphone, Monitor, Eye, EyeOff, Loader2 } from "lucide-react";
+import { uploadToImageKit } from "@/lib/imagekit";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,6 +14,7 @@ import { Banner } from "@/data/mockData";
 const AdminBanners = () => {
   const queryClient = useQueryClient();
   const [banners, setBanners] = useState<Banner[]>([]);
+  const [isUploading, setIsUploading] = useState<number | null>(null);
 
   const { data: serverBanners, isLoading } = useQuery({
     queryKey: ["banners"],
@@ -86,6 +88,19 @@ const AdminBanners = () => {
     setBanners(newBanners);
   };
 
+  const handleFileUpload = async (index: number, file: File) => {
+    try {
+      setIsUploading(index);
+      const optimizedUrl = await uploadToImageKit(file);
+      updateLocalBanner(index, "image", optimizedUrl);
+      toast({ title: "Success", description: "Image uploaded and optimized!" });
+    } catch (error) {
+      toast({ title: "Error", description: "Upload failed", variant: "destructive" });
+    } finally {
+      setIsUploading(null);
+    }
+  };
+
   if (isLoading) return <div>Loading...</div>;
 
   return (
@@ -151,11 +166,18 @@ const AdminBanners = () => {
 
                 <div className="space-y-2">
                   <Label className="flex items-center gap-2"><Monitor className="w-4 h-4" /> Desktop Image</Label>
-                  <Input
-                    value={banner.image}
-                    onChange={(e) => updateLocalBanner(index, "image", e.target.value)}
-                    placeholder="https://..."
-                  />
+                  <div className="flex gap-2">
+                    <Input
+                      type="file"
+                      accept="image/*"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) handleFileUpload(index, file);
+                      }}
+                    />
+                    {isUploading === index && <Loader2 className="w-4 h-4 animate-spin mt-3" />}
+                  </div>
+                  <p className="text-xs text-muted-foreground truncate">{banner.image}</p>
                 </div>
                 <div className="space-y-2">
                   <Label className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Mobile Image</Label>

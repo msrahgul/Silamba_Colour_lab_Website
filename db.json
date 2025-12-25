@@ -138,8 +138,8 @@
       "categoryId": "cat-photo-print",
       "name": "Passport Photo",
       "image": "https://images.unsplash.com/photo-1530047625168-4b29ebf32484?w=800&q=80",
-      "price": "Starting from ₹39.0",
-      "externalUrl": "https://www.photoland.in/"
+      "externalUrl": "https://www.photoland.in/",
+      "price": "Starting from ₹39.0"
     },
     {
       "id": "sub-digital-art",

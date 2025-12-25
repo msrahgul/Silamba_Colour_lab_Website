@@ -14,8 +14,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "@/hooks/use-toast";
-import { api } from "@/lib/api";
 import { Offer } from "@/data/mockData";
+import { api } from "@/lib/api";
+import { ImageUploadField } from "@/components/admin/ImageUploadField";
 
 const AdminOffers = () => {
     const queryClient = useQueryClient();
@@ -146,12 +147,10 @@ const AdminOffers = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <Label htmlFor="image">Image URL</Label>
-                                <Input
-                                    id="image"
-                                    value={formData.image}
-                                    onChange={e => setFormData({ ...formData, image: e.target.value })}
-                                    required
+                                <ImageUploadField
+                                    label="Offer Image"
+                                    value={formData.image || ""}
+                                    onChange={(url) => setFormData({ ...formData, image: url })}
                                 />
                             </div>
 
