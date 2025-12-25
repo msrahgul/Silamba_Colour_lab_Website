@@ -137,7 +137,7 @@
       "id": "sub-passport",
       "categoryId": "cat-photo-print",
       "name": "Passport Photo",
-      "image": "https://images.unsplash.com/photo-1530047625168-4b29ebf32484?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766645125/Passport_Photo_10_ji27l2.jpg",
       "externalUrl": "https://www.photoland.in/",
       "price": "Starting from ₹39.0"
     },

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Loader2, UploadCloud } from "lucide-react";
-import { uploadToImageKit } from "@/lib/imagekit";
+import { uploadToCloudinary } from "@/lib/cloudinary"; // Updated import
 import { toast } from "@/hooks/use-toast";
 
 interface ImageUploadFieldProps {
@@ -20,7 +20,7 @@ export const ImageUploadField = ({ label, value, onChange }: ImageUploadFieldPro
 
         try {
             setIsUploading(true);
-            const url = await uploadToImageKit(file);
+            const url = await uploadToCloudinary(file); // Call Cloudinary
             onChange(url);
             toast({ title: "Success", description: "Image uploaded and optimized" });
         } catch (error) {

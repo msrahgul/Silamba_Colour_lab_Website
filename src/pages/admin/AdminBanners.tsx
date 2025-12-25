@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Save, Plus, Trash2, Smartphone, Monitor, Eye, EyeOff, Loader2 } from "lucide-react";
-import { uploadToImageKit } from "@/lib/imagekit";
+import { uploadToCloudinary } from "@/lib/cloudinary";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -91,7 +91,7 @@ const AdminBanners = () => {
   const handleFileUpload = async (index: number, file: File) => {
     try {
       setIsUploading(index);
-      const optimizedUrl = await uploadToImageKit(file);
+      const optimizedUrl = await uploadToCloudinary(file);
       updateLocalBanner(index, "image", optimizedUrl);
       toast({ title: "Success", description: "Image uploaded and optimized!" });
     } catch (error) {
