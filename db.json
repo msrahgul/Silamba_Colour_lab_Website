@@ -14,8 +14,8 @@
       "id": "2b35",
       "title": "Special Offer - New Year ",
       "subtitle": "",
-      "image": "https://www.photoland.in/wp-content/uploads/2025/10/desktop-2025-Calendar-Festival.jpg",
-      "mobileImage": "https://www.photoland.in/wp-content/uploads/2025/10/desktop-2025-Calendar-Festival.jpg",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766731083/desktop-New-year_2026_k3iesj.jpg",
+      "mobileImage": "https://www.photoland.in/wp-content/uploads/2025/12/mobile-New-year-2026.jpg",
       "ctaText": "Shop Now",
       "ctaLink": "https://www.photoland.in/personalized-photo-gifts/calendars/",
       "isActive": true
@@ -26,85 +26,99 @@
     {
       "id": "cat-photo-print",
       "name": "Photo Print",
-      "image": "https://images.unsplash.com/photo-1554048612-387768052bf7?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726467/Photo-print-collections-1080x717_rgml8b.jpg",
       "description": "High-quality photo prints, enlargements, and restoration services.",
       "isFeatured": true
     },
     {
       "id": "cat-wooden-gifts",
       "name": "Wooden Gifts",
-      "image": "https://images.unsplash.com/photo-1610486483320-a63d917f694a?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766725732/wooden-engraving-showcase-2-800x800_rifkcm.jpg",
       "description": "Engraved wooden plaques, frames, and custom gifts.",
       "isFeatured": true
     },
     {
       "id": "cat-photo-gifts",
       "name": "Photo Gifts",
-      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766725850/Birthday-9-x-8-Dg_2-a-510x510_igzmle.jpg",
       "description": "Personalized mugs, pillows, lamps, crystals, and more.",
       "isFeatured": true
     },
     {
       "id": "cat-synthetic-frame",
       "name": "Synthetic Photo Frame",
-      "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766725974/photo_frame_001-b-510x510_ddh5vo.jpg",
       "description": "Durable and stylish synthetic frames for wall decor.",
       "isFeatured": false
     },
     {
       "id": "cat-premium-frames",
       "name": "Premium Photo Frames",
-      "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726044/Valentines-Day-Trendy-Photo-frame-8-Thumb-b-510x510_aabowy.jpg",
       "description": "Luxury frames, LED frames, and 3D flip frames.",
       "isFeatured": true
     },
     {
       "id": "cat-acrylic-frames",
       "name": "Acrylic Frames",
-      "image": "https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726108/Acrylic-photo-frame-16x24-b-510x510_vgdpwi.jpg",
       "description": "Modern acrylic table tops, wall mounts, and dashboard frames.",
       "isFeatured": false
     },
     {
       "id": "cat-photo-album",
       "name": "Photo Album",
-      "image": "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726144/Leather-Landscape-768x768_ny6bkm.jpg",
       "description": "Professional albums and easy photo books for your memories.",
       "isFeatured": false
     },
     {
       "id": "cat-canvas-prints",
       "name": "Canvas Prints",
-      "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726194/canvas-9-2-900x900_zuhrw5.jpg",
       "description": "Artistic canvas prints, collages, and wall displays.",
       "isFeatured": false
     },
     {
       "id": "cat-corporate-gifts",
       "name": "Corporate Gifts",
-      "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726248/Company-Mouse-pad-510x510_xgz0yb.jpg",
       "description": "Custom mouse pads, photo tiles, and magnets.",
       "isFeatured": false
     },
     {
       "id": "cat-stationery",
       "name": "Stationery",
-      "image": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726307/School-Notebook-Label_d2_C-510x510_tvmocp.jpg",
       "description": "ID cards, letterheads, booklets, and school labels.",
       "isFeatured": false
     },
     {
       "id": "cat-marketing",
       "name": "Marketing Materials",
-      "image": "https://images.unsplash.com/photo-1562564025-51dc115152f2?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726351/Tri-Fold-Brochures-768x768_n0aam1.jpg",
       "description": "Flyers, brochures, posters, and leaflets for business.",
       "isFeatured": false
     },
     {
       "id": "cat-labels",
       "name": "Labels, Stickers & Packaging",
-      "image": "https://images.unsplash.com/photo-1620406856550-9d3d3a0c4436?w=800&q=80",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726404/Label-and-Stickers-Transparent-Rectangle-a-768x768_qjkit0.jpg",
       "description": "Custom labels, stickers, danglers, and tags.",
+      "isFeatured": false
+    },
+    {
+      "id": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Visiting Card",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729307/Standard_Visiting_Cards_jtqeal.jpg",
+      "description": "Celebrate business openings, networking events, or corporate functions with customized visiting cards. ",
+      "isFeatured": true
+    },
+    {
+      "id": "b85cdcc9-5f55-471a-834a-0ae9994df1d3",
+      "name": "Invitations",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729940/Invitation-6x4-1-768x768_pybozh.jpg",
+      "description": "Celebrate weddings, birthdays, or housewarmings with personalized invitations.",
       "isFeatured": false
     }
   ],
@@ -113,433 +127,537 @@
       "id": "sub-photo-prints",
       "categoryId": "cat-photo-print",
       "name": "Personalized Photo Prints",
-      "image": "https://images.unsplash.com/photo-1554048612-387768052bf7?w=800&q=80",
-      "price": "Starting from ₹9.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726576/Personalized_Photo_print_10_x_12_vks4bq.jpg",
+      "externalUrl": "https://www.photoland.in/custom-print/photo-prints/",
+      "price": "Starting from ₹9.0"
     },
     {
       "id": "sub-photo-enlargement",
       "categoryId": "cat-photo-print",
       "name": "Photo Enlargement",
-      "image": "https://images.unsplash.com/photo-1576504677634-06b2130bd1f3?w=800&q=80",
-      "price": "Starting from ₹479.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726840/Photo_Enlargement_15_thx1ef.jpg",
+      "externalUrl": "https://www.photoland.in/custom-print/photo-enlargement/",
+      "price": "Starting from ₹479.0"
     },
     {
       "id": "sub-polaroid",
       "categoryId": "cat-photo-print",
       "name": "Polaroid Prints",
-      "image": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=800&q=80",
-      "price": "Starting from ₹199.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726666/Polaroid-Print-2-510x510_srlwww.jpg",
+      "externalUrl": "https://www.photoland.in/custom-print/polaroid-prints/",
+      "price": "Starting from ₹199.0"
     },
     {
       "id": "sub-passport",
       "categoryId": "cat-photo-print",
       "name": "Passport Photo",
-      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766645125/Passport_Photo_10_ji27l2.jpg",
-      "externalUrl": "https://www.photoland.in/",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726689/Passport-online-order-510x340_l8yjvo.jpg",
+      "externalUrl": "https://www.photoland.in/custom-print/passport-photo/",
       "price": "Starting from ₹39.0"
     },
     {
       "id": "sub-digital-art",
       "categoryId": "cat-photo-print",
       "name": "Digital Art",
-      "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&q=80",
-      "price": "Starting from ₹1499.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726724/Digital_Art_2_etqsad.jpg",
+      "externalUrl": "https://www.photoland.in/custom-print/digital-art/",
+      "price": "Starting from ₹1499.0"
     },
     {
       "id": "sub-photo-restoration",
       "categoryId": "cat-photo-print",
       "name": "Photo Restoration",
-      "image": "https://images.unsplash.com/photo-1533158326339-7f3cf2404354?w=800&q=80",
-      "price": "Starting from ₹1179.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726765/Photo_Restoration_1_qn3ffi.jpg",
+      "externalUrl": "https://www.photoland.in/custom-print/restoration/",
+      "price": "Starting from ₹1179.0"
     },
     {
       "id": "sub-wooden-engraving",
       "categoryId": "cat-wooden-gifts",
       "name": "Wooden engraving",
-      "image": "https://images.unsplash.com/photo-1621255536417-3843d0473347?w=800&q=80",
-      "price": "Starting from ₹490.0",
-      "externalUrl": "https://www.photoland.in/"
-    },
-    {
-      "id": "sub-wooden-line-art",
-      "categoryId": "cat-wooden-gifts",
-      "name": "Photo line art on wood",
-      "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
-      "price": "Starting from ₹490.0",
-      "externalUrl": "https://www.photoland.in/"
-    },
-    {
-      "id": "sub-wooden-print",
-      "categoryId": "cat-wooden-gifts",
-      "name": "Photo print on wood with frame",
-      "image": "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=800&q=80",
-      "price": "Starting from ₹990.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766726957/Wooden_engraving71_wukbb0.jpg",
+      "externalUrl": "https://www.photoland.in/wood-art/wood-engraving/",
+      "price": "Starting from ₹490.0"
     },
     {
       "id": "sub-wooden-certificate",
       "categoryId": "cat-wooden-gifts",
       "name": "Wooden Certificate",
-      "image": "https://images.unsplash.com/photo-1589330694653-4a8b74c6478d?w=800&q=80",
-      "price": "Starting from ₹890.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727061/Wooden_Certificate_7_qvueap.jpg",
+      "externalUrl": "https://www.photoland.in/wood-art/wooden-certificate/",
+      "price": "Starting from ₹890.0"
     },
     {
       "id": "sub-wooden-name-plate",
       "categoryId": "cat-wooden-gifts",
       "name": "Wooden Name Plate",
-      "image": "https://images.unsplash.com/photo-1544258925-517597da4719?w=800&q=80",
-      "price": "Starting from ₹499.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727132/Wooden_Name_Plate_1_nuooel.jpg",
+      "externalUrl": "https://www.photoland.in/wood-art/wooden-name-plate/",
+      "price": "Starting from ₹499.0"
     },
     {
       "id": "sub-led-lamp",
       "categoryId": "cat-photo-gifts",
       "name": "LED Photo Lamp",
-      "image": "https://images.unsplash.com/photo-1617342600057-79cb8a99496e?w=800&q=80",
-      "price": "Starting from ₹499.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727231/LED_Photo_Lamp_13_x47h5b.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/led-photo-lamp/",
+      "price": "Starting from ₹499.0"
     },
     {
       "id": "sub-photo-mugs",
       "categoryId": "cat-photo-gifts",
       "name": "Personalized Photo Mugs",
-      "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&q=80",
-      "price": "Starting from ₹230.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727308/Personalized_Photo_Mugs_jwdypm.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/photo-mugs/",
+      "price": "Starting from ₹230.0"
     },
     {
       "id": "sub-photo-pillows",
       "categoryId": "cat-photo-gifts",
       "name": "Personalized Photo Pillows",
-      "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e6?w=800&q=80",
-      "price": "Starting from ₹650.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727352/Personalized_Photo_Pillows_10_q9kx7a.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/photo-pillows/",
+      "price": "Starting from ₹650.0"
     },
     {
       "id": "sub-3d-crystal",
       "categoryId": "cat-photo-gifts",
       "name": "Personalized 3D Crystal",
-      "image": "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=800&q=80",
-      "price": "Starting from ₹890.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727383/Personalized_3D_Crystal_10_npf0d3.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/3d-crystal/",
+      "price": "Starting from ₹890.0"
     },
     {
       "id": "sub-photo-plates",
       "categoryId": "cat-photo-gifts",
       "name": "Personalized Photo Plates",
-      "image": "https://images.unsplash.com/photo-1623944889288-cd147dbb5b19?w=800&q=80",
-      "price": "Starting from ₹590.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727422/Personalized_Photo_Plates_7_a1vqij.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/photo-plates/",
+      "price": "Starting from ₹590.0"
     },
     {
       "id": "sub-wall-clock",
       "categoryId": "cat-photo-gifts",
       "name": "Personalized Photo Wall Clock",
-      "image": "https://images.unsplash.com/photo-1563861826100-9cb868c72876?w=800&q=80",
-      "price": "Starting from ₹890.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727447/Personalized_Photo_Wall_Clock_4_xcwfbm.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/photo-wall-clock/",
+      "price": "Starting from ₹890.0"
     },
     {
       "id": "sub-key-chains",
       "categoryId": "cat-photo-gifts",
       "name": "Personalized Key Chains",
-      "image": "https://images.unsplash.com/photo-1599423300746-b62507ac9741?w=800&q=80",
-      "price": "Starting from ₹190.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727482/Personalized_Key_Chains_4_vrhe9u.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/key-chains/",
+      "price": "Starting from ₹190.0"
     },
     {
       "id": "sub-specialized-gift",
       "categoryId": "cat-photo-gifts",
       "name": "Specialized Photo Gift",
-      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&q=80",
-      "price": "Starting from ₹350.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727517/Specialized_Photo_Gift_1_lwh0rq.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/specialized-photo-gift/",
+      "price": "Starting from ₹350.0"
     },
     {
       "id": "sub-synthetic-frame",
       "categoryId": "cat-synthetic-frame",
       "name": "Photo Frame",
-      "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80",
-      "price": "Starting from ₹199.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727657/Synthetic_Photo_Frame_8_xm7iqr.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/synthetic-photo-frame/",
+      "price": "Starting from ₹199.0"
     },
     {
       "id": "sub-photo-lamination",
       "categoryId": "cat-synthetic-frame",
       "name": "Photo Lamination",
-      "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
-      "price": "Starting from ₹99.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727696/Photo_Lamination_24_w2bw6g.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/photo-lamination/",
+      "price": "Starting from ₹99.0"
     },
     {
       "id": "sub-collage-frame",
       "categoryId": "cat-synthetic-frame",
       "name": "Collage Photo Frame",
-      "image": "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=800&q=80",
-      "price": "Starting from ₹239.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728358/Collage_Photo_Frame_Set_5_w8uubg.jpg",
+      "externalUrl": "https://www.photoland.in/?page_id=68359",
+      "price": "Starting from ₹239.0"
     },
     {
       "id": "sub-ladder-frame",
       "categoryId": "cat-synthetic-frame",
       "name": "Ladder Photo Frame",
-      "image": "https://images.unsplash.com/photo-1616627561950-9f84dc2b7857?w=800&q=80",
-      "price": "Starting from ₹590.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727787/Ladder_Photo_Frame_4_ee62er.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/ladder-photo-frame/",
+      "price": "Starting from ₹590.0"
     },
     {
       "id": "sub-god-frame",
       "categoryId": "cat-synthetic-frame",
       "name": "God Photo Frame",
-      "image": "https://images.unsplash.com/photo-1606822393273-317424933932?w=800&q=80",
-      "price": "Starting from ₹209.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727823/God_Photo_Frame_5_ssjsrq.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/god-photo-frame/",
+      "price": "Starting from ₹209.0"
     },
     {
       "id": "sub-mosaic-frame",
       "categoryId": "cat-synthetic-frame",
       "name": "Mosaic Photo Frame",
-      "image": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=800&q=80",
-      "price": "Starting from ₹990.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727873/Mosaic_Photo_Frame_5_wkfkzr.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/mosaic-photo-frame-fm/",
+      "price": "Starting from ₹990.0"
     },
     {
       "id": "sub-mosaic-lamination",
       "categoryId": "cat-synthetic-frame",
       "name": "Mosaic Photo Lamination",
-      "image": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=800&q=80",
-      "price": "Starting from ₹890.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727929/Mosaic_Photo_Lamination_4_jwisp7.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/mosaic-photo-frame-lamination/",
+      "price": "Starting from ₹890.0"
     },
     {
       "id": "sub-trendy-frame",
       "categoryId": "cat-premium-frames",
       "name": "Trendy Photo Frame",
-      "image": "https://images.unsplash.com/photo-1582582621959-48d27397dc69?w=800&q=80",
-      "price": "Starting from ₹390.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766727998/Valentines-Day-Trendy-Photo-frame-9-Thumb-b-510x510_qcgvwj.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/photo-frame/trendy-photo-frame/",
+      "price": "Starting from ₹390.0"
     },
     {
       "id": "sub-led-frame",
       "categoryId": "cat-premium-frames",
       "name": "Personalized LED Photo Frame",
-      "image": "https://images.unsplash.com/photo-1617342600057-79cb8a99496e?w=800&q=80",
-      "price": "Starting from ₹1890.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728058/Personalized_LED_Photo_Frame_3_i7zndz.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/led-photo-frame/",
+      "price": "Starting from ₹1890.0"
     },
     {
       "id": "sub-3d-flip-frame",
       "categoryId": "cat-premium-frames",
       "name": "Personalized 3D Flip Photo Frame",
-      "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
-      "price": "Starting from ₹490.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728090/Personalized_3D_Flip_Photo_Frame_1_oum4nl.gif",
+      "externalUrl": "https://www.photoland.in/photo-frames/3d-flip-photo-frame/",
+      "price": "Starting from ₹490.0"
     },
     {
       "id": "sub-acrylic-frame",
       "categoryId": "cat-acrylic-frames",
       "name": "Acrylic Photo Frame",
-      "image": "https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=800&q=80",
-      "price": "Starting from ₹299.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728165/Acrylic_Photo_Frame_2_svzwn9.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/photo-frame/acrylic-photo-frame/",
+      "price": "Starting from ₹299.0"
     },
     {
       "id": "sub-car-dashboard",
       "categoryId": "cat-acrylic-frames",
       "name": "Car Dashboard LED Photo Frame",
-      "image": "https://images.unsplash.com/photo-1594951478792-75d3122c830a?w=800&q=80",
-      "price": "Starting from ₹690.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728202/Car_Dashboard_LED_Photo_Frame_1_nwalet.jpg",
+      "externalUrl": "https://www.photoland.in/photo-frames/car-led-frame/",
+      "price": "Starting from ₹690.0"
     },
     {
       "id": "sub-pro-album",
       "categoryId": "cat-photo-album",
       "name": "Professional Photo Album",
-      "image": "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=800&q=80",
-      "price": "Starting from ₹1990.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728237/Photo_Album_1_opfpdg.jpg",
+      "externalUrl": "https://www.photoland.in/product/photo-album/photo-book/professional-photo-album/personalized-professional-photo-album/",
+      "price": "Starting from ₹1990.0"
     },
     {
       "id": "sub-easy-book",
       "categoryId": "cat-photo-album",
       "name": "Easy Photo Book",
-      "image": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80",
-      "price": "Starting from ₹499.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728270/Easy_Photo_Book_1_fbl4vu.jpg",
+      "externalUrl": "https://www.photoland.in/product/photo-album/photo-book/easy-photo-book/personalized-easy-photo-book-your-happy-moments/",
+      "price": "Starting from ₹499.0"
     },
     {
       "id": "sub-canvas-prints",
       "categoryId": "cat-canvas-prints",
       "name": "Personalized Canvas Prints",
-      "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80",
-      "price": "Starting from ₹590.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728304/Personalized_Canvas_Prints_3_r3j87p.jpg",
+      "externalUrl": "https://www.photoland.in/canvas-prints/canvas-prints/",
+      "price": "Starting from ₹590.0"
     },
     {
       "id": "sub-canvas-collage",
       "categoryId": "cat-canvas-prints",
       "name": "Personalized Photo Collage",
-      "image": "https://images.unsplash.com/photo-1581023773099-da189977823e?w=800&q=80",
-      "price": "Starting from ₹590.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728342/Personalized_Photo_Collage_6_sxrsup.jpg",
+      "externalUrl": "https://www.photoland.in/canvas-prints/photo-collage/",
+      "price": "Starting from ₹590.0"
     },
     {
       "id": "sub-canvas-wall",
       "categoryId": "cat-canvas-prints",
       "name": "Personalized Canvas Wall Displays",
-      "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80",
-      "price": "Starting from ₹4990.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728410/Personalized_Canvas_Wall_Displays_4_gleamq.jpg",
+      "externalUrl": "https://www.photoland.in/canvas-prints/canvas-wall-displays/",
+      "price": "Starting from ₹4990.0"
     },
     {
       "id": "sub-mouse-pad",
       "categoryId": "cat-corporate-gifts",
       "name": "Personalized Mouse Pad",
-      "image": "https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?w=800&q=80",
-      "price": "Starting from ₹269.0",
-      "externalUrl": "https://www.photoland.in/"
-    },
-    {
-      "id": "sub-photo-tiles",
-      "categoryId": "cat-corporate-gifts",
-      "name": "Personalized Photo Tiles",
-      "image": "https://images.unsplash.com/photo-1615822906475-408992ca3b4d?w=800&q=80",
-      "price": "Starting from ₹800.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728466/Personalized_Mouse_Pad_17_ocsbrw.jpg",
+      "externalUrl": "https://www.photoland.in/unique-print/mouse-pad/",
+      "price": "Starting from ₹269.0"
     },
     {
       "id": "sub-photo-magnets",
       "categoryId": "cat-corporate-gifts",
       "name": "Photo Magnets",
-      "image": "https://images.unsplash.com/photo-1629813292723-6490333273e9?w=800&q=80",
-      "price": "Starting from ₹149.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728545/Photo_Magnets_2_hiaiye.jpg",
+      "externalUrl": "https://www.photoland.in/unique-print/photo-magnets/",
+      "price": "Starting from ₹149.0"
     },
     {
       "id": "sub-booklet",
       "categoryId": "cat-stationery",
       "name": "Booklet",
-      "image": "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=800&q=80",
-      "price": "Starting from ₹114.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728823/Booklet_4_sojdks.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/booklet/",
+      "price": "Starting from ₹114.0"
     },
     {
       "id": "sub-certificate",
       "categoryId": "cat-stationery",
       "name": "Certificate",
-      "image": "https://images.unsplash.com/photo-1589330694653-4a8b74c6478d?w=800&q=80",
-      "price": "Starting from ₹35.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728850/Certificate_2_vegq77.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/certificate/",
+      "price": "Starting from ₹35.0"
     },
     {
       "id": "sub-id-card",
       "categoryId": "cat-stationery",
       "name": "ID Card",
-      "image": "https://images.unsplash.com/photo-1596265371388-43edbaadab56?w=800&q=80",
-      "price": "Starting from ₹75.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728885/ID_Card_5_evkg7z.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/id-card-print/",
+      "price": "Starting from ₹75.0"
     },
     {
       "id": "sub-letterhead",
       "categoryId": "cat-stationery",
       "name": "Letterhead",
-      "image": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80",
-      "price": "Starting from ₹150.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728910/Letterhead_rvk4ct.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/letterhead/",
+      "price": "Starting from ₹150.0"
     },
     {
       "id": "sub-envelope",
       "categoryId": "cat-stationery",
       "name": "Envelope Cover",
-      "image": "https://images.unsplash.com/photo-1596265371388-43edbaadab56?w=800&q=80",
-      "price": "Starting from ₹20.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728967/Envelope_Cover_1_gocn01.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/cover-envelopes/",
+      "price": "Starting from ₹20.0"
     },
     {
       "id": "sub-memo-pad",
       "categoryId": "cat-stationery",
       "name": "Memo Pad",
-      "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&q=80",
-      "price": "Starting from ₹1250.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766728987/Memo_Pad_raol0f.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/memo-pad/",
+      "price": "Starting from ₹1250.0"
     },
     {
       "id": "sub-presentation-folder",
       "categoryId": "cat-stationery",
       "name": "Presentation Folders",
-      "image": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80",
-      "price": "Starting from ₹900.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729018/Presentation_Folders_bntrvh.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/presentation-folder/",
+      "price": "Starting from ₹900.0"
     },
     {
       "id": "sub-school-label",
       "categoryId": "cat-stationery",
       "name": "School Label",
-      "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-      "price": "Starting from ₹99.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729056/School_Label_2_sedsvl.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/school-label/",
+      "price": "Starting from ₹99.0"
     },
     {
       "id": "sub-leaflets",
       "categoryId": "cat-marketing",
       "name": "Leaflets",
-      "image": "https://images.unsplash.com/photo-1562564025-51dc115152f2?w=800&q=80",
-      "price": "Starting from ₹350.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729078/Leaflets_2_z95ttb.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/leaflets/",
+      "price": "Starting from ₹350.0"
     },
     {
       "id": "sub-brochures",
       "categoryId": "cat-marketing",
       "name": "Brochures",
-      "image": "https://images.unsplash.com/photo-1576158189873-19f80735701a?w=800&q=80",
-      "price": "Starting from ₹290.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729099/Brochures_1_qcbt8x.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/brochures/",
+      "price": "Starting from ₹290.0"
     },
     {
       "id": "sub-flyers",
       "categoryId": "cat-marketing",
       "name": "Flyers",
-      "image": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80",
-      "price": "Starting from ₹50.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729122/Flyers_3_hkxxlc.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/flyers/",
+      "price": "Starting from ₹50.0"
     },
     {
       "id": "sub-poster",
       "categoryId": "cat-marketing",
       "name": "Poster",
-      "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80",
-      "price": "Starting from ₹43.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729158/Poster_4_uhyzif.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/poster/",
+      "price": "Starting from ₹43.0"
     },
     {
       "id": "sub-label-stickers",
       "categoryId": "cat-labels",
       "name": "Label & Stickers",
-      "image": "https://images.unsplash.com/photo-1620406856550-9d3d3a0c4436?w=800&q=80",
-      "price": "Starting from ₹240.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729190/Label_Stickers_5_nnzm8v.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/label-stickers/",
+      "price": "Starting from ₹240.0"
     },
     {
       "id": "sub-dangler",
       "categoryId": "cat-labels",
       "name": "Hanging Dangler",
-      "image": "https://images.unsplash.com/photo-1616627561950-9f84dc2b7857?w=800&q=80",
-      "price": "Starting from ₹800.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729248/Hanging_Dangler_7_wrvnsi.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/hanging-dangler/",
+      "price": "Starting from ₹800.0"
     },
     {
       "id": "sub-tags",
       "categoryId": "cat-labels",
       "name": "Tags",
-      "image": "https://images.unsplash.com/photo-1589330694653-4a8b74c6478d?w=800&q=80",
-      "price": "Starting from ₹999.0",
-      "externalUrl": "https://www.photoland.in/"
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729283/Tags_4_zrlmcb.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/tags/",
+      "price": "Starting from ₹999.0"
+    },
+    {
+      "id": "sub-1766729466569",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Standard Visiting Cards",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729438/Standard_Visiting_Cards_j1iss1.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/standard-visiting-cards/",
+      "price": "₹190"
+    },
+    {
+      "id": "sub-1766729516747",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Matte Visiting Cards",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729512/Matte_Visiting_Card_1_nfcf5j.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/matte-visiting-cards/",
+      "price": "₹190"
+    },
+    {
+      "id": "sub-1766729559271",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Premium Visiting Cards | Needle point",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729603/Premium_Visiting_Cards_1_edonmg.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/premium-visiting-cards-needle-point/",
+      "price": "₹450"
+    },
+    {
+      "id": "sub-1766729652844",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Premium Visiting Cards | Lenin textured",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729647/Premium_Visiting_Cards_2_gmrbje.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/premium-visiting-cards-lenin-textured/",
+      "price": "₹450"
+    },
+    {
+      "id": "sub-1766729689083",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Premium Visiting Cards | Ivory",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729681/Premium_Visiting_Cards_3_i4suqb.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/premium-visiting-cards-ivory/",
+      "price": "₹250.0"
+    },
+    {
+      "id": "sub-1766729725193",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Non-Tearable Visiting Cards | Synthetic 200 Mic",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729718/Non-Tearable_Visiting_Cards_1_iid4jo.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/non-tearable-visiting-cards-synthetic/",
+      "price": "₹350"
+    },
+    {
+      "id": "sub-1766729772125",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Non-Tearable Visiting Cards | Synthetic 125 Mic",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729753/Non-Tearable_Visiting_Cards_2_bzvnsc.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/non-tearable-visiting-cards-synthetic-125-mic/",
+      "price": "₹250"
+    },
+    {
+      "id": "sub-1766729810275",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Non-Tearable Visiting Cards | Metallic silver",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729806/Non-Tearable_Visiting_Cards_3_d3v0t5.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/non-tearable-visiting-cards-metallic-silver/",
+      "price": "₹350"
+    },
+    {
+      "id": "sub-1766729861111",
+      "categoryId": "c2cd0112-f64d-4270-ad77-df99d1ed203a",
+      "name": "Non-Tearable Visiting Cards | Metallic dual silver",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766729856/Non-Tearable_Visiting_Cards_4_gp57qi.jpg",
+      "externalUrl": "https://www.photoland.in/product/print-shop/visiting-cards/non-tearable-visiting-cards-metallic-dual-silver/",
+      "price": "₹350"
+    },
+    {
+      "id": "sub-1766730087285",
+      "categoryId": "b85cdcc9-5f55-471a-834a-0ae9994df1d3",
+      "name": "Invitations",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766730067/Invitation-5x7-Bi-Fold-768x768_phtwzm.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/invitations/",
+      "price": "Starting from ₹14.28"
+    },
+    {
+      "id": "sub-1766730152299",
+      "categoryId": "b85cdcc9-5f55-471a-834a-0ae9994df1d3",
+      "name": "Greeting Card",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766730141/Greeting-card-Bi-Fold-5x7-1-768x768_dhmyrv.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/greeting-cards/",
+      "price": "Starting from ₹14.28"
+    },
+    {
+      "id": "sub-1766730191021",
+      "categoryId": "cat-corporate-gifts",
+      "name": "Sign Board",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766730187/Sign_Board_tbxsvv.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/sign-board/",
+      "price": "₹999.00"
+    },
+    {
+      "id": "sub-1766730241689",
+      "categoryId": "cat-corporate-gifts",
+      "name": "Name Plate",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766730238/Name_Plate_wk3mwo.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/name-plate/",
+      "price": "₹999.00"
+    },
+    {
+      "id": "sub-1766730270842",
+      "categoryId": "cat-corporate-gifts",
+      "name": "Awards & Shields",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766730268/Awards_Shields_qkpz9v.jpg",
+      "externalUrl": "https://www.photoland.in/print-shop/awards-shields/",
+      "price": "₹999.00"
+    },
+    {
+      "id": "sub-1766730365537",
+      "categoryId": "cat-photo-gifts",
+      "name": "T-Shirt",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766730367/men-t-shirts-600x600_cssdci.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/t-shirts/",
+      "price": ""
+    },
+    {
+      "id": "sub-1766730430824",
+      "categoryId": "cat-photo-gifts",
+      "name": "Personalized Calendars",
+      "image": "https://res.cloudinary.com/dwnitcfgr/image/upload/f_auto,q_auto/v1766730428/2026-Desktop-Calendar-category_pmup8g.jpg",
+      "externalUrl": "https://www.photoland.in/personalized-photo-gifts/calendars/",
+      "price": ""
     }
   ],
   "occasions": [
